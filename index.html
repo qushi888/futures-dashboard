@@ -166,14 +166,14 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
 <div class="header">
   <h1>国内商品期货多空汇总看板 · 2026-10-20</h1>
   <div class="meta">
-    数据截止：2026-10-19 · 共扫描 71 个活跃主力合约（已剔除 1 个退市品种）· 生成时间：2026-10-20 13:43:58 ·
+    数据截止：2026-10-19 · 共扫描 71 个活跃主力合约（已剔除 1 个退市品种）· 生成时间：2026-10-20 15:45:22 ·
     方法：EMA5/15 + TNR(Kaufman ER, 阈值0.2) + 震荡识别器四规则
   </div>
 </div>
 <div class="status-bar">
   <div class="left">
     <span><span id="statusDot" class="status-dot"></span><span id="statusText">检测中…</span></span>
-    <span>最近更新：<span id="updateTime">2026-10-20 13:43:58</span></span>
+    <span>最近更新：<span id="updateTime">2026-10-20 15:45:22</span></span>
   </div>
 </div>
 <div class="container">
@@ -306,7 +306,7 @@ window.addEventListener('resize', () => { pie.resize(); bar.resize(); });
 
 // 倒计时与盘中状态判定
 (function() {
-  const genTimeStr = '2026-10-20 13:43:58';  // 服务端写入的生成时间
+  const genTimeStr = '2026-10-20 15:45:22';  // 服务端写入的生成时间
   const genTime = new Date(genTimeStr.replace(/-/g, '/'));
   const now = new Date();
   // 判断是否在期货交易时段：日盘 9:00-11:30 / 13:30-15:00，周一至周五
