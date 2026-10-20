@@ -166,14 +166,14 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
 <div class="header">
   <h1>国内商品期货多空汇总看板 · 2026-10-21</h1>
   <div class="meta">
-    数据截止：2026-10-20 · 共扫描 70 个活跃主力合约（已剔除 0 个退市品种）· 生成时间：2026-10-21 07:49:51 ·
+    数据截止：2026-10-20 · 共扫描 70 个活跃主力合约（已剔除 0 个退市品种）· 生成时间：2026-10-21 07:51:50 ·
     方法：EMA5/15 + TNR(Kaufman ER, 阈值0.2) + 震荡识别器四规则
   </div>
 </div>
 <div class="status-bar">
   <div class="left">
     <span><span id="statusDot" class="status-dot"></span><span id="statusText">检测中…</span></span>
-    <span>最近更新：<span id="updateTime">2026-10-21 07:49:51</span></span>
+    <span>最近更新：<span id="updateTime">2026-10-21 07:51:50</span></span>
   </div>
 </div>
 <div class="container">
@@ -258,7 +258,7 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
     3. 数据源差异：SHFE（16 个）走交易所官方接口；CZCE（21 个）、DCE（18 个）、GFEX LC/PS/SI 走新浪合约级通道（akshare 备援）。CZCE 主路径 2026-09-28 临时故障返回"无数据"，已全部切换至 plan_b。<br>
     4. 震荡占比通常仅 1.7%~5.3%（四条全满足本身极苛刻）；若觉得识别太严，可调 range_win/slope_flips/cross_cnt 参数。<br>
     5. AO/LC/PS/SI/SH/PR/PX 等品种上市不足 5 年，样本长度有限，看板已显式标注 bars 数。<br>
-    6. WH（普麦）、RI（早籼稻）已于 2023/2022 年退市，已自动归入"退市"分组不参与多空统计。<br>
+    6. 主力合约选择规则：按每日持仓量最大，跳过 2611 合约；豆二B/苯乙烯EB/多晶硅PS/粳米RR 由 2701 接任（用户指定）。普麦/早籼稻已因无流动性移除。<br>
     <br>
     ⚠️ 以上内容由 AI 基于公开信息整理生成，仅供参考，不构成任何投资建议或交易指令。期货交易有杠杆，决策需谨慎。
   </div>
@@ -306,7 +306,7 @@ window.addEventListener('resize', () => { pie.resize(); bar.resize(); });
 
 // 倒计时与盘中状态判定
 (function() {
-  const genTimeStr = '2026-10-21 07:49:51';  // 服务端写入的生成时间
+  const genTimeStr = '2026-10-21 07:51:50';  // 服务端写入的生成时间
   const genTime = new Date(genTimeStr.replace(/-/g, '/'));
   const now = new Date();
   // 判断是否在期货交易时段：日盘 9:00-11:30 / 13:30-15:00，周一至周五
